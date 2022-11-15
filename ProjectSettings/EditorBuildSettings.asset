@@ -13,11 +13,20 @@ EditorBuildSettings:
     guid: 7ed9ac68137d1094583142f331f3302f
   - enabled: 1
     path: Assets/Scenes/Nivel0.unity
+    guid: 05c67eeb77acd704db643c02a45f6675
+  - enabled: 1
+    path: Assets/Scenes/Nivel1.unity
     guid: aa6c547ade5a5ec40b70312d27751fe8
+  - enabled: 1
+    path: Assets/Scenes/Nivel2.unity
+    guid: 2ce487db90be6634a8de8356cd189e31
   - enabled: 1
     path: Assets/Scenes/Superado.unity
     guid: 31efe27a2bca5be4495317376991a519
   - enabled: 1
     path: Assets/Scenes/Haz Muerto.unity
     guid: 469a6c32a72980a4f928063e46eeb0f5
+  - enabled: 1
+    path: Assets/Scenes/LiderBoard.unity
+    guid: 750884ebf2412954d9532d651c618366
   m_configObjects: {}
