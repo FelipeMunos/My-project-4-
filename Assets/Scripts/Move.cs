@@ -10,7 +10,7 @@ public class Move : MonoBehaviour
 
     Rigidbody2D rb2d;
 
- 
+    private bool saltando=false;
     // Start is called before the first frame update
 
     void Start()
@@ -25,10 +25,23 @@ public class Move : MonoBehaviour
     void Update()
     {
         transform.Translate(Input.GetAxis("Horizontal") * velocidad * Time.deltaTime,0, 0);
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if(Input.GetKeyUp(KeyCode.Space)&& !saltando){
    
             rb2d.AddForce(Vector2.up * salto, ForceMode2D.Impulse);
             }
             
     }
-}
+    private void OnCollisionEnter2D(Collision2D enemigo){
+        if (enemigo.collider.CompareTag("Piso")){
+        saltando=false;
+    }
+    }
+        private void OnCollisionExit2D(Collision2D enemigo){ 
+        if(enemigo.collider.CompareTag("Enemy")){
+        Debug.Log("sale");
+    }
+    if (enemigo.collider.CompareTag("Piso")){
+        saltando=true;
+    }
+    }
+}   
