@@ -409,6 +409,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -2543,17 +2567,17 @@ TextureImporter:
       Warrior_Sheet-Effect_96: -2493374651010981141
       Warrior_Sheet-Effect_83: -5853263684127566195
       Warrior_Sheet-Effect_57: -1765949524758486658
+      Warrior_Sheet-Effect_87: 1550331120443448429
       Warrior_Sheet-Effect_2: -4486162353907066099
       Warrior_Sheet-Effect_14: -7879541775824577086
-      Warrior_Sheet-Effect_87: 1550331120443448429
       Warrior_Sheet-Effect_29: 5309330118571133426
       Warrior_Sheet-Effect_59: 3914160388638673933
       Warrior_Sheet-Effect_18: 8629003983396144442
       Warrior_Sheet-Effect_43: 565109345717033213
       Warrior_Sheet-Effect_51: -8179423753346160949
       Warrior_Sheet-Effect_33: 8758733799639075308
-      Warrior_Sheet-Effect_52: -1605837713619785204
       Warrior_Sheet-Effect_77: -848416997838638187
+      Warrior_Sheet-Effect_52: -1605837713619785204
       Warrior_Sheet-Effect_49: 4778756267546337206
       Warrior_Sheet-Effect_22: -381468241496348146
       Warrior_Sheet-Effect_48: -9068822172998705990

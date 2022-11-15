@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemigo
+  - Piso
+  - PowerUp
+  - EnemigoOP
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -13,7 +18,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Suelo
   - 
   - 
   - 
@@ -38,6 +43,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fondo
+    uniqueID: 2315521023
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Arbol
+    uniqueID: 1853964681
+    locked: 0
+  - name: Player
+    uniqueID: 898303413
+    locked: 0
+  - name: Into
+    uniqueID: 1113169243
     locked: 0
