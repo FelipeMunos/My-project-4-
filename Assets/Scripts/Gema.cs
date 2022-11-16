@@ -5,14 +5,14 @@ using UnityEngine;
 public class Gema : MonoBehaviour
 {
 
-    public int valor = 1;
-    public GameManager gameManager;
+    //public int valor = 1;
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
-            gameManager.SumarPuntos(valor);
+            //gameManager.SumarPuntos(valor);
             Destroy(this.gameObject);
         }
         
