@@ -18,11 +18,29 @@ public class Moverse : MonoBehaviour
 
     private bool mirandoDerecha = true;
 
+    [Header("Salto")]
+
+    [SerializeField] private float fuerzaDeSalto;
+
+    [SerializeField] private LayerMask queEsSuelo; 
+
+    [SerializeField] private Transform controladorSuelo;
+
+    [SerializeField] private Vector3 dimensionesCaja;
+
+    [SerializeField] private bool enSuelo;
+
+    private bool Salto = false;
+
+    [Header("Animacion")]
+
+    private Animator animator;
 
     // Start is called before the first frame update
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         
     }
 
@@ -31,16 +49,26 @@ public class Moverse : MonoBehaviour
     {
         movimientoHorizontal = Input.GetAxisRaw("Horizontal") * velocidadDeMovimiento;
 
+        animator.SetFloat("Horizontal", Mathf.Abs(movimientoHorizontal));
+
+        if(Input.GetButtonDown("Jump")){
+            Salto = true;
+        }
+        
+
     }
 
     private void FixedUpdate(){
 
+        enSuelo = Physics2D.OverlapBox(controladorSuelo.position, dimensionesCaja, 0f, queEsSuelo);    
         //mover
-        Mover(movimientoHorizontal * Time.fixedDeltaTime);
+        Mover(movimientoHorizontal * Time.fixedDeltaTime, Salto);
+
+        Salto = false;
     }
 
 
-    private void Mover(float mover){
+    private void Mover(float mover, bool saltar ){
 
         Vector3 velocidadObjetivo = new Vector2(mover, rb2D.velocity.y);
         rb2D.velocity = Vector3.SmoothDamp(rb2D.velocity, velocidadObjetivo, ref velocidad, suavizadoDeMovimiento);
@@ -54,6 +82,10 @@ public class Moverse : MonoBehaviour
 
             //Girar
             Girar();
+        }
+        if(enSuelo && saltar){
+            enSuelo = false;
+            rb2D.AddForce(new Vector2(0f, fuerzaDeSalto));
         }
     }
 
